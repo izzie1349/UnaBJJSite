@@ -3076,6 +3076,8 @@ h2.title {
 
 .modal .modal-dialog {
   margin-top: 100px;
+  overflow-x: scroll;
+  background-color: white;
 }
 .modal .modal-header .close {
   color: #555555;
