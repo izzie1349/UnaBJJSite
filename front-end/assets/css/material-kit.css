@@ -3033,6 +3033,8 @@ h2.title {
   box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
   border-radius: 3px;
   border: none;
+  overflow-x: scroll;
+  background-color: white;
 }
 .modal-content .modal-header {
   border-bottom: none;
@@ -3076,6 +3078,8 @@ h2.title {
 
 .modal .modal-dialog {
   margin-top: 100px;
+  /*overflow-x: scroll;
+  background-color: white;*/
 }
 .modal .modal-header .close {
   color: #555555;

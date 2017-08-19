@@ -45,12 +45,13 @@
 						    </a>
           </li>
 
+          <li>
+            <a href="#" style="font-size:14px;" class="btn btn-danger btn-raised btn-md btn-round" data-toggle="modal" data-target="#modalSchedule">
+                                                                          SCHEDULE
+                                                                          </a></li>
 
-          <li> <button class="btn btn-white btn-simple btn-lg">Current Students</button> </li>
-
-
-
-          <li> <a href="#" style="font-size:14px;" class="btn btn-info btn-raised btn-md btn-round" data-toggle="modal" data-target="#myModal">
+          <li>
+            <a href="#" style="font-size:14px;" class="btn btn-info btn-raised btn-md btn-round" data-toggle="modal" data-target="#myModal">
                                                                           START FREE TRIAL
                                                                           </a></li>
 
@@ -304,78 +305,179 @@ START FREE TRIAL
 
   <!-- test -->
 
-  <!-- Sart Modal -->
+  <!-- Sart Modal: sign up form -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-
-
-
-
-
-
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
               <i class="material-icons">clear</i>
             </button>
           <h4 class="modal-title">UnaBJJ Registration</h4>
         </div>
         <div class="modal-body">
-
           <div class="form-group label-floating">
             <input type="text" value="" class="form-control" />
             <label class="control-label">Full Name</label>
           </div>
-
           <div class="form-group label-floating">
             <input type="email" value="" class="form-control" />
             <label class="control-label">Email</label>
           </div>
-
           <div class="form-group label-floating">
             <input type="number" value="" class="form-control" required/>
             <label class="control-label">Phone Number</label>
           </div>
-
           <p>Tell us what you would like to get out of training at UnaBJJ</p>
-
           <div class="checkbox">
             <label><input type="checkbox" name="optionsCheckboxes">
               Practical Self Defense</label>
           </div>
-
           <div class="checkbox">
             <label><input type="checkbox" name="optionsCheckboxes">
               Get in Shape</label>
           </div>
-
           <div class="checkbox">
             <label><input type="checkbox" name="optionsCheckboxes">
               Build Confidence</label>
           </div>
-
           <div class="checkbox">
             <label><input type="checkbox" name="optionsCheckboxes">
               Safer Sparring than Striking Martial Arts</label>
           </div>
-
           <div class="checkbox">
             <label><input type="checkbox" name="optionsCheckboxes">
               More Fun Than a Regular Gym</label>
           </div>
-
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default btn-simple">cancel</button>
           <!-- <button type="button" class="btn btn-info btn-simple" data-dismiss="modal">Submit</button> -->
           <button type="button" class="btn btn-info btn-raised btn-md btn-round" data-dismiss="modal">SIGN UP</button>
-
-
         </div>
       </div>
     </div>
   </div>
   <!--  End Modal -->
+
+
+<!-- start modal: Schedule -->
+<div class="modal fade" id="modalSchedule" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <table class="table">
+          <thead>
+              <tr>
+                  <th class="text-center">Monday</th>
+                  <th class="text-center">Tuesday</th>
+                  <th class="text-center">Wednesday</th>
+                  <th class="text-center">Thursday</th>
+                  <th class="text-center">Friday</th>
+                  <th class="text-center">Saturday</th>
+                  <th class="text-center">Sunday</th>
+              </tr>
+          </thead>
+
+          <tbody>
+              <tr>
+                  <td>
+                    <button class="btn btn-default" rel="tooltip" title="4 to 6 year olds" style="background-color:yellow;">Little Champs</br>5:00pm-5:30pm</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-default" style="background-color:red;">All Levels Gi</br>11:30AM-12:30pm</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-default" rel="tooltip" title="4 to 6 year olds" style="background-color:yellow;">Little Champs</br>5:00pm-5:30pm</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-default" style="background-color:red;">All Levels Gi</br>11:30AM-12:30pm</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-default" rel="tooltip" title="4 to 6 year olds" style="background-color:yellow;">Little Champs</br>5:00pm-5:30pm</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-default" style="background-color:red;">Open Drill</br>11:00am-11:45am</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-default" style="background-color:black;">NoGi</br>11:00am-12:00pm</button>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <button class="btn btn-default" rel="tooltip" title="7 to 9 year olds" style="background-color:orange;">Junior BJJ</br>5:30pm-6:30pm</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-default" style="background-color:green;">Junior/Youth Takedown Gi</br>5:30pm-6:30pm</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-default" rel="tooltip" title="10+ year olds" style="background-color:green;">Youth BJJ</br>6:30pm-7:30pm</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-default" style="background-color:gold;">MuayThai/KickBoxing</br>6:30pm-7:30pm</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-default" style="background-color:orange;">Junior NoGi</br>5:30pm-6:30pm</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-default" style="background-color:red;">Open Mat</br>11:45am-2:00pm</button>
+                  </td>
+              </tr>
+              <tr>
+                <td>
+                  <button class="btn btn-default" rel="tooltip" title="10+ year olds" style="background-color:green;">Youth BJJ</br>6:30pm-7:30pm</button>
+                </td>
+                <td>
+                  <button class="btn btn-default" style="background-color:gold;">MuayThai/KickBoxing</br>6:30pm-7:30pm</button>
+                </td>
+                <td>
+                  <button class="btn btn-default" rel="tooltip" title="7 to 9 year olds" style="background-color:orange;">Junior BJJ</br>5:30pm-6:30pm</button>
+                </td>
+                <td>
+                  <button class="btn btn-default" style="background-color:white; color:black;">Fundamentals Gi</br>7:30pm-8:30pm</button>
+                </td>
+                <td>
+                  <button class="btn btn-default" style="background-color:green;">Youth NoGi</br>6:30pm-7:30pm</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button class="btn btn-default" rel="tooltip" title="at least 4 stripe whitebelt" style="background-color:blue;">Int & Adv Gi</br>7:30pm-8:30pm</button>
+                </td>
+                <td>
+                  <button class="btn btn-default" style="background-color:purple;">Competition: gi & nogi</br>7:30pm-9:30pm</button>
+                </td>
+                <td>
+                  <button class="btn btn-default" rel="tooltip" title="at least 4 stripe whitebelt" style="background-color:blue;">Int & Adv Gi</br>7:30pm-8:30pm</button>
+                </td>
+                <td>
+                  <button class="btn btn-default" style="background-color:black;">nogi</br>8:30pm-9:30pm</button>
+                </td>
+                <td>
+                  <button class="btn btn-default" style="background-color:red;">All levels Gi</br>7:30pm-8:30pm</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button class="btn btn-default" style="background-color:white; color:black;">Fundamentals Gi</br>8:30pm-9:30pm</button>
+                </td>
+                <td>
+                  <!-- <button></button> -->
+                </td>
+                <td>
+                  <button style="background-color:white; color:black;" class="btn btn-default">Fundamentals Gi</br>8:30pm-9:30pm</button>
+                </td>
+              </tr>
+          </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- end modal -->
+
+
+
+
 
   <!-- test -->
 </body>
