@@ -9,6 +9,13 @@ $('#myModal').on('show.bs.modal', function (event) {
 })
 
 $('#signUpButton').on('click', function (event) {
-	console.log('hello');
+	console.log('clicked signUpButton');
 	$('#thankYouModal').modal('show'); 
+})
+
+
+$('#sendButton').on('click', function (event) {
+	console.log('clicked sendButton')
+	$('#thankYouHandHoldModal').modal('show');
+	//show new modal here
 })
