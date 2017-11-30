@@ -1,23 +1,13 @@
-from flask import Flask
-
-
-app = Flask(__name__)
-
-# @app.route('/')
-# def hello_world():
-#     return 'Hello, World!'
-
-
+# from flask import Flask
+from app import app
 from flask import render_template
+
 
 @app.route('/')
 def home():
     return render_template('landing_page.html')
- #    return """
- #    <!doctype html>
-	# <h1>hello world!<h1>
-	# """
 
-
-if __name__ == "__main__":
-    app.run(debug=True)
+@app.route('/signup')
+def sign_up():
+    return render_template('landing_page.html',
+                            form=form)
