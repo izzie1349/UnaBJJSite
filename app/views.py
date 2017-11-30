@@ -22,7 +22,6 @@ from flask_mail import Mail, Message
 from forms import ContactForm
 
 
-# app = Flask(__name__)
 app.secret_key = 'YourSuperSecreteKey'
 
 # add mail server config

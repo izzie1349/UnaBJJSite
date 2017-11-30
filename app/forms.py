@@ -1,8 +1,8 @@
-from flask_wtf import Form
+from flask_wtf import FlaskForm
 from wtforms import StringField, BooleanField, IntegerField
 from wtforms.validators import DataRequired
 
-class SignUpForm(Form):
+class SignUpForm(FlaskForm):
     full_name = StringField('full_name', validators=[DataRequired()])
     email = StringField('email', validators=[DataRequired()])
     phone_number = IntegerField('phone_number', validators=[DataRequired()])
@@ -21,7 +21,8 @@ def CheckNameLength(form, field):
     raise ValidationError('Name must have more then 3 characters')
 
 class ContactForm(Form):
-    name = StringField('Your Name:', [validators.DataRequired(), CheckNameLength])
-    email = StringField('Your e-mail address:', [validators.DataRequired(), validators.Email('your@email.com')])
+    name = StringField('Full Name', [validators.DataRequired(), CheckNameLength])
+    email = StringField('Email', [validators.DataRequired(), validators.Email('your@email.com')])
+    phone_number = IntegerField('Phone Number:') # add validation
     message = TextAreaField('Your message:', [validators.DataRequired()])
-    submit = SubmitField('Send Message')
+    submit = SubmitField('SIGN UP')
