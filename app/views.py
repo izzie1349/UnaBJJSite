@@ -20,7 +20,6 @@ test
 from flask import Flask, render_template, request
 from flask_mail import Mail, Message
 from forms import ContactForm
-# from app import secrets
 from secrets import EMAIL, EMAIL_PASSWORD
 
 
@@ -44,8 +43,10 @@ def contact():
             return 'Please fill in all fields <p><a href="/contact">Try Again!!!</a></p>'
         else:
             msg = Message("Message from your visitor" + form.name.data,
-                          sender='YourUser@NameHere',
-                          recipients=['yourRecieve@mail.com', 'someOther@mail.com'])
+                          sender=EMAIL,
+                          recipients=['izzie1349+FRED@gmail.com',
+                                      'izzie1349+ZOE@gmail.com',
+                                      ])
             msg.body = """
             From: %s <%s>,
             %s
