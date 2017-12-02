@@ -13,14 +13,14 @@ testing
 '''
 #######
 
-from flask_wtf import Form
+from flask_wtf import FlaskForm
 from wtforms import StringField, TextAreaField, SubmitField, validators
 
 def CheckNameLength(form, field):
   if len(field.data) < 4:
     raise ValidationError('Name must have more then 3 characters')
 
-class ContactForm(Form):
+class ContactForm(FlaskForm):
     name = StringField('Full Name', [validators.DataRequired(), CheckNameLength])
     email = StringField('Email', [validators.DataRequired(), validators.Email('your@email.com')])
     phone_number = IntegerField('Phone Number:') # add validation
