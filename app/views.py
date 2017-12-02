@@ -20,6 +20,8 @@ test
 from flask import Flask, render_template, request
 from flask_mail import Mail, Message
 from forms import ContactForm
+# from app import secrets
+from secrets import EMAIL, EMAIL_PASSWORD
 
 
 app.secret_key = 'YourSuperSecreteKey'
@@ -28,8 +30,8 @@ app.secret_key = 'YourSuperSecreteKey'
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USE_SSL'] = True
-app.config['MAIL_USERNAME'] = 'damiank1349@gmail.com'
-app.config['MAIL_PASSWORD'] = 'theexorcist357'
+app.config['MAIL_USERNAME'] = EMAIL
+app.config['MAIL_PASSWORD'] = EMAIL_PASSWORD
 
 mail = Mail(app)
 
