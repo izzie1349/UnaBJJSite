@@ -3,14 +3,11 @@ from app import app
 from flask import render_template
 
 
-@app.route('/')
-def home():
-    return render_template('landing_page.html')
+# @app.route('/', methods=('GET', 'POST'))
+# def home():
+#     return render_template('landing_page.html')
+#
 
-@app.route('/signup')
-def sign_up():
-    return render_template('landing_page.html',
-                            form=form)
 ###########
 '''
 test
@@ -22,7 +19,6 @@ from flask_mail import Mail, Message
 from forms import ContactForm
 from secrets import EMAIL, EMAIL_PASSWORD
 
-
 app.secret_key = 'YourSuperSecreteKey'
 
 # add mail server config
@@ -33,13 +29,18 @@ app.config['MAIL_USERNAME'] = EMAIL
 app.config['MAIL_PASSWORD'] = EMAIL_PASSWORD
 
 mail = Mail(app)
+# from flask_bootstrap import Bootstrap as B
+# B(app)
 
-@app.route('/contact', methods=('GET', 'POST'))
+from flask import Flask, redirect, url_for, flash
+
+@app.route('/', methods=('GET', 'POST'))
 def contact():
     form = ContactForm()
 
     if request.method == 'POST':
-        if form.validate() == False:
+        # TODO backwards logic
+        if form.validate() == True:
             return 'Please fill in all fields <p><a href="/contact">Try Again!!!</a></p>'
         else:
             msg = Message("Message from your visitor" + form.name.data,
@@ -50,8 +51,9 @@ def contact():
             msg.body = """
             From: %s <%s>,
             %s
-            """ % (form.name.data, form.email.data, form.message.data)
+            """ % (form.name.data, form.email.data, form.phone_number.data)
             mail.send(msg)
-            return "Successfully  sent message!"
+            return flash("Successfully  sent message!")
+            # return redirect(url_for('landing_page') + '#thankYouHandHoldModal')
     elif request.method == 'GET':
-        return render_template('contact.html', form=form)
+        return render_template('landing_page.html', form=form)

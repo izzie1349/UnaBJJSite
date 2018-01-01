@@ -2,10 +2,10 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, BooleanField, IntegerField
 from wtforms.validators import DataRequired
 
-class SignUpForm(FlaskForm):
-    full_name = StringField('full_name', validators=[DataRequired()])
-    email = StringField('email', validators=[DataRequired()])
-    phone_number = IntegerField('phone_number', validators=[DataRequired()])
+# class SignUpForm(FlaskForm):
+#     full_name = StringField('full_name', validators=[DataRequired()])
+#     email = StringField('email', validators=[DataRequired()])
+#     phone_number = IntegerField('phone_number', validators=[DataRequired()])
 
 #######
 '''
@@ -22,7 +22,7 @@ def CheckNameLength(form, field):
 
 class ContactForm(FlaskForm):
     name = StringField('Full Name', [validators.DataRequired(), CheckNameLength])
-    email = StringField('Email', [validators.DataRequired(), validators.Email('your@email.com')])
+    email = StringField('Email', [validators.DataRequired(),])
     phone_number = IntegerField('Phone Number:') # add validation
     message = TextAreaField('Your message:', [validators.DataRequired()])
     submit = SubmitField('SIGN UP')
