@@ -16,8 +16,11 @@ test
 
 from flask import Flask, render_template, request
 from flask_mail import Mail, Message
-from forms import ContactForm
-from secrets import EMAIL, EMAIL_PASSWORD
+from .forms import ContactForm
+from .config.settings import(
+    EMAIL,
+    EMAIL_PASSWORD
+)
 
 app.secret_key = 'YourSuperSecreteKey'
 
