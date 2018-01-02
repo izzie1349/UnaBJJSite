@@ -315,7 +315,7 @@ START FREE TRIAL
             <h4 class="text-center">UnaBJJ Registration</h4>
         </div>
 
-      <form method="POST">
+      <form id="contact-form-modal">
         {{ form.hidden_tag() }}
         <div class="modal-body">
 
@@ -327,7 +327,7 @@ START FREE TRIAL
 
           <div class="form-group label-floating input required">
                   {{ form.email.label(class="control-label")}}
-                  {{ form.email(class="form-control")}}
+                  {{ form.email(class="form-control", type="email")}}
           </div>
 
           <div class="form-group label-floating">
@@ -359,7 +359,8 @@ START FREE TRIAL
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">cancel</button>
-            {{ form.submit(class="btn btn-info btn-raised btn-md btn-round") }}
+          <button type="button" name="button" class="btn btn-info btn-raised btn-md btn-round submit">Submit</button>
+            <!-- {{ form.submit(class="btn btn-info btn-raised btn-md btn-round submit") }} -->
         </form>
         </div>
       </div>

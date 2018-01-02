@@ -1,4 +1,5 @@
 # from flask import Flask
+import json
 from app import app
 from flask import render_template
 
@@ -14,7 +15,7 @@ test
 '''
 ############
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, Response
 from flask_mail import Mail, Message
 from .forms import ContactForm
 from .config.settings import(
@@ -60,3 +61,11 @@ def contact():
             # return redirect(url_for('landing_page') + '#thankYouHandHoldModal')
     elif request.method == 'GET':
         return render_template('landing_page.html', form=form)
+
+
+@app.route('/ajax/contact', methods=("POST",))
+def contact1():
+    print "DATA: %s" %request.data
+    return Response(json.dumps({
+            'success': True
+        }), mimetype=u'application/json')

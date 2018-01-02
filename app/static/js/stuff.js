@@ -10,7 +10,7 @@ $('#myModal').on('show.bs.modal', function (event) {
 
 $('#signUpButton').on('click', function (event) {
 	console.log('clicked signUpButton');
-	$('#thankYouModal').modal('show'); 
+	$('#thankYouModal').modal('show');
 })
 
 
@@ -19,3 +19,23 @@ $('#sendButton').on('click', function (event) {
 	$('#thankYouHandHoldModal').modal('show');
 	//show new modal here
 })
+
+$('#contact-form-modal .submit').on('click', function(event) {
+
+  // stop running alterante functionality, only run whats in this function.
+  event.preventDefault();
+
+  // collect things in form
+  var form_data = $('#contact-form-modal').serialize()
+  $.ajax({
+    url: '/ajax/contact',
+    type: 'POST',
+    data: form_data,
+    success: function() {
+      console.log("it worked")
+    },
+    error: function() {
+      console.log("IT failed");
+    },
+  });
+});
