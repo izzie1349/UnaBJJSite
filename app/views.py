@@ -66,6 +66,8 @@ def contact():
 @app.route('/ajax/contact', methods=("POST",))
 def contact1():
     print "DATA: %s" %request.data
+    # send an email here
     return Response(json.dumps({
-            'success': True
+            'success': True,
+            'msg': 'Great! thanks',
         }), mimetype=u'application/json')

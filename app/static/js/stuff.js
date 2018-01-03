@@ -32,7 +32,10 @@ $('#contact-form-modal .submit').on('click', function(event) {
     type: 'POST',
     data: form_data,
     success: function() {
-      console.log("it worked")
+      console.log("=====modal.hide====")
+      $('#contact-form-modal').modal().hide();
+      // $('#thankYouHandHoldModal').modal('show');
+
     },
     error: function() {
       console.log("IT failed");
