@@ -23,6 +23,6 @@ def CheckNameLength(form, field):
 class ContactForm(FlaskForm):
     name = StringField('Full Name', [validators.DataRequired(), CheckNameLength])
     email = StringField('Email', [validators.DataRequired(),])
-    phone_number = IntegerField('Phone Number:') # add validation
+    phone_number = IntegerField('Phone Number') # add validation
     message = TextAreaField('Your message:', [validators.DataRequired()])
     submit = SubmitField('SIGN UP')
