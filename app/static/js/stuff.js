@@ -33,7 +33,31 @@ $('#contact-form-modal .submit').on('click', function(event) {
     data: form_data,
     success: function() {
       $('#contact-form-modal').modal().hide();
+      $('#thankYouModal').modal('show');
+    },
+    error: function() {
+      console.log("IT failed");
+    },
+  });
+});
+
+
+$('#contact-form-modal2 .submit').on('click', function(event) {
+
+  // stop running alterante functionality, only run whats in this function.
+  event.preventDefault();
+
+  // collect things in form
+  var form_data = $('#contact-form-modal2').serialize()
+  $.ajax({
+    url: '/ajax/contact',
+    type: 'POST',
+    data: form_data,
+    success: function() {
+      // $('#contact-form-modal').modal().hide();
+      console.log('sydgfjsdhg');
       $('#thankYouHandHoldModal').modal('show');
+      $('#contact-form-modal2')[0].reset();
     },
     error: function() {
       console.log("IT failed");
